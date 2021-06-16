@@ -38,8 +38,11 @@ namespace GYM_Application_Project
             this.HomeButton = new System.Windows.Forms.Button();
             this.DashboardLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.TrainerPanel = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Btn_Addtrainer = new System.Windows.Forms.Button();
+            this.Btn_Refresh = new System.Windows.Forms.Button();
+            this.lbl_trainer = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.TrainerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -180,25 +183,66 @@ namespace GYM_Application_Project
             this.panel1.Size = new System.Drawing.Size(326, 703);
             this.panel1.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(308, 328);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 55);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Adeeshya";
-            // 
             // TrainerPanel
             // 
-            this.TrainerPanel.Controls.Add(this.label1);
+            this.TrainerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.TrainerPanel.Controls.Add(this.flowLayoutPanel1);
+            this.TrainerPanel.Controls.Add(this.Btn_Addtrainer);
+            this.TrainerPanel.Controls.Add(this.Btn_Refresh);
+            this.TrainerPanel.Controls.Add(this.lbl_trainer);
             this.TrainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TrainerPanel.Location = new System.Drawing.Point(326, 0);
             this.TrainerPanel.Name = "TrainerPanel";
             this.TrainerPanel.Size = new System.Drawing.Size(856, 703);
             this.TrainerPanel.TabIndex = 3;
+            this.TrainerPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TrainerPanel_Paint);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(42, 206);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(772, 497);
+            this.flowLayoutPanel1.TabIndex = 2;
+            // 
+            // Btn_Addtrainer
+            // 
+            this.Btn_Addtrainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Btn_Addtrainer.FlatAppearance.BorderSize = 0;
+            this.Btn_Addtrainer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Addtrainer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Addtrainer.Location = new System.Drawing.Point(591, 124);
+            this.Btn_Addtrainer.Name = "Btn_Addtrainer";
+            this.Btn_Addtrainer.Size = new System.Drawing.Size(223, 50);
+            this.Btn_Addtrainer.TabIndex = 1;
+            this.Btn_Addtrainer.Text = "Add Trainer";
+            this.Btn_Addtrainer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_Addtrainer.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Refresh
+            // 
+            this.Btn_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.Btn_Refresh.FlatAppearance.BorderSize = 0;
+            this.Btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Refresh.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Refresh.Image")));
+            this.Btn_Refresh.Location = new System.Drawing.Point(514, 124);
+            this.Btn_Refresh.Name = "Btn_Refresh";
+            this.Btn_Refresh.Size = new System.Drawing.Size(56, 50);
+            this.Btn_Refresh.TabIndex = 1;
+            this.Btn_Refresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_Refresh.UseVisualStyleBackColor = false;
+            // 
+            // lbl_trainer
+            // 
+            this.lbl_trainer.AutoSize = true;
+            this.lbl_trainer.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_trainer.ForeColor = System.Drawing.Color.White;
+            this.lbl_trainer.Location = new System.Drawing.Point(30, 29);
+            this.lbl_trainer.Name = "lbl_trainer";
+            this.lbl_trainer.Size = new System.Drawing.Size(257, 69);
+            this.lbl_trainer.TabIndex = 0;
+            this.lbl_trainer.Text = "Trainers";
             // 
             // Trainer
             // 
@@ -208,6 +252,7 @@ namespace GYM_Application_Project
             this.Controls.Add(this.TrainerPanel);
             this.Controls.Add(this.panel1);
             this.Name = "Trainer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trainer";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -227,7 +272,10 @@ namespace GYM_Application_Project
         private System.Windows.Forms.Button HomeButton;
         private System.Windows.Forms.Label DashboardLabel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel TrainerPanel;
+        private System.Windows.Forms.Button Btn_Refresh;
+        private System.Windows.Forms.Label lbl_trainer;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button Btn_Addtrainer;
     }
 }

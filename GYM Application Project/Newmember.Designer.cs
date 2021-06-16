@@ -208,6 +208,7 @@ namespace GYM_Application_Project
             this.Controls.Add(this.NewmemberPanel);
             this.Controls.Add(this.panel1);
             this.Name = "Newmember";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Newmember";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -49,5 +49,10 @@ namespace GYM_Application_Project
             payments.Show();
             this.Hide();
         }
+
+        private void TrainerPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

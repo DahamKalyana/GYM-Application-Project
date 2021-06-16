@@ -33,13 +33,13 @@ namespace GYM_Application_Project
             this.HomePanel = new System.Windows.Forms.Panel();
             this.LogoutButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.PaymentButton = new System.Windows.Forms.Button();
             this.TrainersButton = new System.Windows.Forms.Button();
             this.ProfileButton = new System.Windows.Forms.Button();
             this.NewmemberButton = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
             this.DashboardLabel = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.HomePanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -94,6 +94,14 @@ namespace GYM_Application_Project
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(326, 703);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel2.Location = new System.Drawing.Point(0, 135);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(13, 75);
+            this.panel2.TabIndex = 8;
             // 
             // PaymentButton
             // 
@@ -207,14 +215,6 @@ namespace GYM_Application_Project
             this.DashboardLabel.TabIndex = 2;
             this.DashboardLabel.Text = "Dashboard";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel2.Location = new System.Drawing.Point(0, 135);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(13, 75);
-            this.panel2.TabIndex = 8;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -223,6 +223,7 @@ namespace GYM_Application_Project
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.HomePanel.ResumeLayout(false);
