@@ -54,5 +54,12 @@ namespace GYM_Application_Project
         {
 
         }
+
+        private void Btn_Addtrainer_Click(object sender, EventArgs e)
+        {
+            TrainersForm home = new TrainersForm();
+            home.Show();
+            this.Hide();
+        }
     }
 }

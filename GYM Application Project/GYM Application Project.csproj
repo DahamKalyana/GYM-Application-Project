@@ -84,6 +84,18 @@
     <Compile Include="Trainer.Designer.cs">
       <DependentUpon>Trainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="TrainersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainersForm.Designer.cs">
+      <DependentUpon>TrainersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainersForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainersForm2.Designer.cs">
+      <DependentUpon>TrainersForm2.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +122,12 @@
     </Compile>
     <EmbeddedResource Include="Trainer.resx">
       <DependentUpon>Trainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainersForm.resx">
+      <DependentUpon>TrainersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainersForm2.resx">
+      <DependentUpon>TrainersForm2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
