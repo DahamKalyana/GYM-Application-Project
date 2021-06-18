@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GYM_Application_Project;
 
 namespace GYM_Application_Project
 {
@@ -16,6 +18,57 @@ namespace GYM_Application_Project
         {
             InitializeComponent();
         }
+
+
+        private void GenerateDynamicUSerControl()
+        {
+            flowLayoutPanel1.Controls.Clear();
+
+            
+            ClassBLL1 objbll = new ClassBLL1();
+            DataTable dt = objbll.GetItems();
+
+            if (dt != null)
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    MyUserControl[] listItems = new MyUserControl[dt.Rows.Count];
+
+                    for (int i = 0; i < 1; i++)
+                    {
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            listItems[i] = new MyUserControl();
+
+                            MemoryStream ms = new MemoryStream((byte[])row["Image"]);
+                            listItems[i].Icon = new Bitmap(ms);
+
+                            listItems[i].Name = row["Name"].ToString();
+                            listItems[i].Email = row["Email"].ToString();
+                            listItems[i].Rate = row["Rate"].ToString();
+
+                            flowLayoutPanel1.Controls.Add(listItems[i]);
+
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        private void Trainer_Load(object sender, EventArgs e)
+        {
+            GenerateDynamicUSerControl();
+        }
+        //add trainer
+        private void Btn_Addtrainer_Click(object sender, EventArgs e)
+        {
+            TrainersForm home = new TrainersForm();
+            home.Show();
+            this.Hide();
+        }
+
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
@@ -55,11 +108,17 @@ namespace GYM_Application_Project
 
         }
 
-        private void Btn_Addtrainer_Click(object sender, EventArgs e)
+
+        //Refresh
+        private void Btn_Refresh_Click(object sender, EventArgs e)
         {
-            TrainersForm home = new TrainersForm();
-            home.Show();
-            this.Hide();
+            GenerateDynamicUSerControl();
+            if (flowLayoutPanel1.Controls.Count == 0)
+            {
+                MessageBox.Show("Nothing to show!");
+            }
         }
     }
+
+   
 }

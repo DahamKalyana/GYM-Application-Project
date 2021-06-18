@@ -37,16 +37,55 @@ namespace GYM_Application_Project
 
         }
 
+        string g;
+
         private void button1_Click(object sender, EventArgs e)
         {
-            TrainersForm2 home = new TrainersForm2();
-            home.Show();
-            this.Hide();
+
+            if(rbtn_male.Checked == true)
+            {
+                g = "Male";
+            }
+
+            ClassBLL1 objbll = new ClassBLL1();
+            Trainer obj = new Trainer();
+
+            if (objbll.SaveItems(pb_Image.Image, txtbox_name.Text, txtbox_email.Text, txtbox_age.Text, txtbox_exp.Text, txtbox_rate.Text))
+            {
+                MessageBox.Show("Trainer added succusfully!");
+                obj.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("Failed to add trainer!");
+            }
         }
 
         private void lbl_address_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbl_gender_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_UserPicUpload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opendlg = new OpenFileDialog();
+            if (opendlg.ShowDialog() == DialogResult.OK)
+            {
+                Image image = Image.FromFile(opendlg.FileName);
+                pb_Image.Image = image;
+            }
         }
     }
 }

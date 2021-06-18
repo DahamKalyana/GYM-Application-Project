@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ClassBLL.cs" />
+    <Compile Include="DAL\ClassDAL.cs" />
+    <Compile Include="DAL\Connection.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +60,12 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl.Designer.cs">
+      <DependentUpon>MyUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Newmember.cs">
       <SubType>Form</SubType>
@@ -90,17 +99,14 @@
     <Compile Include="TrainersForm.Designer.cs">
       <DependentUpon>TrainersForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TrainersForm2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TrainersForm2.Designer.cs">
-      <DependentUpon>TrainersForm2.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl.resx">
+      <DependentUpon>MyUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Newmember.resx">
       <DependentUpon>Newmember.cs</DependentUpon>
@@ -125,9 +131,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TrainersForm.resx">
       <DependentUpon>TrainersForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TrainersForm2.resx">
-      <DependentUpon>TrainersForm2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
