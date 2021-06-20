@@ -29,8 +29,16 @@ namespace GYM_Application_Project
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // profileuser
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "profileuser";
+            this.Size = new System.Drawing.Size(640, 134);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
