@@ -39,6 +39,7 @@ namespace GYM_Application_Project
             this.DashboardLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TrainerPanel = new System.Windows.Forms.Panel();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Btn_Addtrainer = new System.Windows.Forms.Button();
             this.Btn_Refresh = new System.Windows.Forms.Button();
@@ -193,6 +194,7 @@ namespace GYM_Application_Project
             // TrainerPanel
             // 
             this.TrainerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.TrainerPanel.Controls.Add(this.btn_delete);
             this.TrainerPanel.Controls.Add(this.flowLayoutPanel1);
             this.TrainerPanel.Controls.Add(this.Btn_Addtrainer);
             this.TrainerPanel.Controls.Add(this.Btn_Refresh);
@@ -205,6 +207,19 @@ namespace GYM_Application_Project
             this.TrainerPanel.TabIndex = 3;
             this.TrainerPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TrainerPanel_Paint);
             // 
+            // btn_delete
+            // 
+            this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btn_delete.FlatAppearance.BorderSize = 0;
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
+            this.btn_delete.Location = new System.Drawing.Point(589, 124);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(56, 50);
+            this.btn_delete.TabIndex = 3;
+            this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
@@ -216,16 +231,16 @@ namespace GYM_Application_Project
             // 
             // Btn_Addtrainer
             // 
-            this.Btn_Addtrainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Btn_Addtrainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.Btn_Addtrainer.FlatAppearance.BorderSize = 0;
             this.Btn_Addtrainer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Addtrainer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Addtrainer.Location = new System.Drawing.Point(591, 124);
+            this.Btn_Addtrainer.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Addtrainer.Image")));
+            this.Btn_Addtrainer.Location = new System.Drawing.Point(722, 124);
             this.Btn_Addtrainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Addtrainer.Name = "Btn_Addtrainer";
-            this.Btn_Addtrainer.Size = new System.Drawing.Size(223, 50);
+            this.Btn_Addtrainer.Size = new System.Drawing.Size(56, 50);
             this.Btn_Addtrainer.TabIndex = 1;
-            this.Btn_Addtrainer.Text = "Add Trainer";
             this.Btn_Addtrainer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_Addtrainer.UseVisualStyleBackColor = false;
             this.Btn_Addtrainer.Click += new System.EventHandler(this.Btn_Addtrainer_Click);
@@ -237,7 +252,7 @@ namespace GYM_Application_Project
             this.Btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Refresh.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Refresh.Image")));
-            this.Btn_Refresh.Location = new System.Drawing.Point(515, 124);
+            this.Btn_Refresh.Location = new System.Drawing.Point(656, 124);
             this.Btn_Refresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Refresh.Name = "Btn_Refresh";
             this.Btn_Refresh.Size = new System.Drawing.Size(56, 50);
@@ -251,7 +266,7 @@ namespace GYM_Application_Project
             this.lbl_trainer.AutoSize = true;
             this.lbl_trainer.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_trainer.ForeColor = System.Drawing.Color.White;
-            this.lbl_trainer.Location = new System.Drawing.Point(29, 30);
+            this.lbl_trainer.Location = new System.Drawing.Point(29, 31);
             this.lbl_trainer.Name = "lbl_trainer";
             this.lbl_trainer.Size = new System.Drawing.Size(257, 69);
             this.lbl_trainer.TabIndex = 0;
@@ -264,6 +279,7 @@ namespace GYM_Application_Project
             this.ClientSize = new System.Drawing.Size(1181, 703);
             this.Controls.Add(this.TrainerPanel);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Trainer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -291,5 +307,6 @@ namespace GYM_Application_Project
         private System.Windows.Forms.Label lbl_trainer;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button Btn_Addtrainer;
+        private System.Windows.Forms.Button btn_delete;
     }
 }

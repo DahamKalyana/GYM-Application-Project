@@ -43,6 +43,7 @@ namespace GYM_Application_Project
             Trainer trainer = new Trainer();
             trainer.Show();
             this.Hide();
+            trainer.GenerateDynamicUSerControl();
         }
 
         private void PaymentButton_Click(object sender, EventArgs e)

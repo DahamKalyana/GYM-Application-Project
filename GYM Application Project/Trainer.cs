@@ -20,7 +20,7 @@ namespace GYM_Application_Project
         }
 
 
-        private void GenerateDynamicUSerControl()
+        public void GenerateDynamicUSerControl()
         {
             flowLayoutPanel1.Controls.Clear();
 
@@ -94,6 +94,7 @@ namespace GYM_Application_Project
         private void TrainersButton_Click(object sender, EventArgs e)
         {
             this.Show();
+            GenerateDynamicUSerControl();
         }
 
         private void PaymentButton_Click(object sender, EventArgs e)
@@ -112,11 +113,16 @@ namespace GYM_Application_Project
         //Refresh
         private void Btn_Refresh_Click(object sender, EventArgs e)
         {
-            GenerateDynamicUSerControl();
-            if (flowLayoutPanel1.Controls.Count == 0)
-            {
-                MessageBox.Show("Nothing to show!");
-            }
+            TrainersForm update = new TrainersForm();
+            update.Show();
+            this.Hide();
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            TrainersForm del = new TrainersForm();
+            del.Show();
+            this.Hide();
         }
     }
 

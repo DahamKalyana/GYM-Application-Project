@@ -12,12 +12,12 @@ namespace GYM_Application_Project
     class ClassBLL1
     {
         #region Save Items
-        public bool SaveItems(Image img, string name,  string email, string age, string experience, string rate)
+        public bool SaveItems(Image img, int trainerID, string name,  string email, string age, string experience, string rate)
         {
             try
             {
                 ClassDAL objdal = new ClassDAL(); //data access layer class object to access functions
-                return objdal.AddItemsToTable(img, name, email, age, experience, rate); // pass values to data access layer function
+                return objdal.AddItemsToTable(img, trainerID, name, email, age, experience, rate); // pass values to data access layer function
             }
             catch (Exception e)
             {
@@ -43,5 +43,39 @@ namespace GYM_Application_Project
             }
         }
         #endregion
+
+
+        public bool UpdateItems(Image img, int trainerID, string name, string email, string age, string experience, string rate)
+        {
+            try
+            {
+                ClassDAL objdal = new ClassDAL(); //data access layer class object to access functions
+                return objdal.UpdateTable(img, trainerID, name, email, age, experience, rate); // pass values to data access layer function
+            }
+            catch (Exception e)
+            {
+                DialogResult result = MessageBox.Show(e.Message.ToString());
+                return false;
+            }
+
+        }
+
+
+        //Delete data
+        public bool DeleteItems(int trainerID)
+        {
+            try
+            {
+                ClassDAL objdal = new ClassDAL(); //data access layer class object to access functions
+                return objdal.DeleteTableData(trainerID); // pass values to data access layer function
+            }
+            catch (Exception e)
+            {
+                DialogResult result = MessageBox.Show(e.Message.ToString());
+                return false;
+            }
+
+        }
+
     }
 }

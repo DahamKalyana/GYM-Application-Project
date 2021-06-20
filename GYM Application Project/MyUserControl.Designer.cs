@@ -36,13 +36,14 @@ namespace GYM_Application_Project
             this.lbl_Rate = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Icon)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pb_Icon
             // 
-            this.pb_Icon.Location = new System.Drawing.Point(0, 0);
+            this.pb_Icon.Location = new System.Drawing.Point(18, 11);
             this.pb_Icon.Name = "pb_Icon";
-            this.pb_Icon.Size = new System.Drawing.Size(150, 150);
+            this.pb_Icon.Size = new System.Drawing.Size(130, 130);
             this.pb_Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Icon.TabIndex = 0;
             this.pb_Icon.TabStop = false;
@@ -89,7 +90,7 @@ namespace GYM_Application_Project
             this.lbl_Rate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbl_Rate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Rate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lbl_Rate.Location = new System.Drawing.Point(236, 104);
+            this.lbl_Rate.Location = new System.Drawing.Point(240, 104);
             this.lbl_Rate.Name = "lbl_Rate";
             this.lbl_Rate.Size = new System.Drawing.Size(83, 32);
             this.lbl_Rate.TabIndex = 1;
@@ -98,10 +99,11 @@ namespace GYM_Application_Project
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.pb_Icon);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(772, 150);
+            this.panel1.Size = new System.Drawing.Size(720, 150);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -113,11 +115,11 @@ namespace GYM_Application_Project
             this.Controls.Add(this.lbl_Rate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_Name);
-            this.Controls.Add(this.pb_Icon);
             this.Controls.Add(this.panel1);
             this.Name = "MyUserControl";
-            this.Size = new System.Drawing.Size(772, 150);
+            this.Size = new System.Drawing.Size(720, 150);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Icon)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

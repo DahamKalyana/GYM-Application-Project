@@ -207,6 +207,7 @@ namespace GYM_Application_Project
             this.ClientSize = new System.Drawing.Size(1182, 703);
             this.Controls.Add(this.PaymentsPanel);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Payments";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Payments";

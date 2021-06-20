@@ -57,22 +57,23 @@ namespace GYM_Application_Project
             this.panel9 = new System.Windows.Forms.Panel();
             this.txtbox_email = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.lbl_gender = new System.Windows.Forms.Label();
-            this.lbl_UserPic = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.txt_newmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.rbtn_male = new System.Windows.Forms.RadioButton();
-            this.rbtn_female = new System.Windows.Forms.RadioButton();
-            this.btn_UserPicUpload = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
+            this.update = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pb_Image = new System.Windows.Forms.PictureBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btn_UserPicUpload = new System.Windows.Forms.Button();
+            this.lbl_UserPic = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).BeginInit();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -120,6 +121,7 @@ namespace GYM_Application_Project
             this.PaymentButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PaymentButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.PaymentButton.UseVisualStyleBackColor = true;
+            this.PaymentButton.Click += new System.EventHandler(this.PaymentButton_Click);
             // 
             // TrainersButton
             // 
@@ -140,6 +142,7 @@ namespace GYM_Application_Project
             this.TrainersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TrainersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.TrainersButton.UseVisualStyleBackColor = true;
+            this.TrainersButton.Click += new System.EventHandler(this.TrainersButton_Click);
             // 
             // ProfileButton
             // 
@@ -160,6 +163,7 @@ namespace GYM_Application_Project
             this.ProfileButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProfileButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ProfileButton.UseVisualStyleBackColor = true;
+            this.ProfileButton.Click += new System.EventHandler(this.ProfileButton_Click);
             // 
             // NewmemberButton
             // 
@@ -180,6 +184,7 @@ namespace GYM_Application_Project
             this.NewmemberButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NewmemberButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.NewmemberButton.UseVisualStyleBackColor = true;
+            this.NewmemberButton.Click += new System.EventHandler(this.NewmemberButton_Click);
             // 
             // HomeButton
             // 
@@ -200,6 +205,7 @@ namespace GYM_Application_Project
             this.HomeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HomeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.HomeButton.UseVisualStyleBackColor = true;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // DashboardLabel
             // 
@@ -222,9 +228,9 @@ namespace GYM_Application_Project
             this.lbl_fname.Location = new System.Drawing.Point(372, 118);
             this.lbl_fname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_fname.Name = "lbl_fname";
-            this.lbl_fname.Size = new System.Drawing.Size(68, 25);
+            this.lbl_fname.Size = new System.Drawing.Size(108, 25);
             this.lbl_fname.TabIndex = 4;
-            this.lbl_fname.Text = "Name";
+            this.lbl_fname.Text = "Trainer ID";
             // 
             // lbl_email
             // 
@@ -235,9 +241,9 @@ namespace GYM_Application_Project
             this.lbl_email.Location = new System.Drawing.Point(746, 118);
             this.lbl_email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(65, 25);
+            this.lbl_email.Size = new System.Drawing.Size(68, 25);
             this.lbl_email.TabIndex = 7;
-            this.lbl_email.Text = "Email";
+            this.lbl_email.Text = "Name";
             // 
             // lbl_age
             // 
@@ -245,7 +251,7 @@ namespace GYM_Application_Project
             this.lbl_age.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.lbl_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_age.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbl_age.Location = new System.Drawing.Point(370, 217);
+            this.lbl_age.Location = new System.Drawing.Point(370, 278);
             this.lbl_age.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_age.Name = "lbl_age";
             this.lbl_age.Size = new System.Drawing.Size(51, 25);
@@ -258,7 +264,7 @@ namespace GYM_Application_Project
             this.lbl_exp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.lbl_exp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_exp.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbl_exp.Location = new System.Drawing.Point(650, 217);
+            this.lbl_exp.Location = new System.Drawing.Point(650, 278);
             this.lbl_exp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_exp.Name = "lbl_exp";
             this.lbl_exp.Size = new System.Drawing.Size(168, 25);
@@ -271,7 +277,7 @@ namespace GYM_Application_Project
             this.lbl_rate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.lbl_rate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_rate.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbl_rate.Location = new System.Drawing.Point(944, 217);
+            this.lbl_rate.Location = new System.Drawing.Point(944, 278);
             this.lbl_rate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_rate.Name = "lbl_rate";
             this.lbl_rate.Size = new System.Drawing.Size(113, 25);
@@ -309,7 +315,7 @@ namespace GYM_Application_Project
             this.txtbox_age.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_age.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtbox_age.Location = new System.Drawing.Point(375, 253);
+            this.txtbox_age.Location = new System.Drawing.Point(375, 310);
             this.txtbox_age.Margin = new System.Windows.Forms.Padding(4);
             this.txtbox_age.Name = "txtbox_age";
             this.txtbox_age.Size = new System.Drawing.Size(167, 23);
@@ -321,7 +327,7 @@ namespace GYM_Application_Project
             this.txtbox_exp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_exp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_exp.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtbox_exp.Location = new System.Drawing.Point(655, 253);
+            this.txtbox_exp.Location = new System.Drawing.Point(655, 310);
             this.txtbox_exp.Margin = new System.Windows.Forms.Padding(4);
             this.txtbox_exp.Name = "txtbox_exp";
             this.txtbox_exp.Size = new System.Drawing.Size(167, 23);
@@ -333,7 +339,7 @@ namespace GYM_Application_Project
             this.txtbox_rate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_rate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_rate.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtbox_rate.Location = new System.Drawing.Point(949, 252);
+            this.txtbox_rate.Location = new System.Drawing.Point(949, 310);
             this.txtbox_rate.Margin = new System.Windows.Forms.Padding(4);
             this.txtbox_rate.Name = "txtbox_rate";
             this.txtbox_rate.Size = new System.Drawing.Size(167, 23);
@@ -343,7 +349,7 @@ namespace GYM_Application_Project
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(375, 275);
+            this.panel3.Location = new System.Drawing.Point(375, 336);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(167, 2);
@@ -353,7 +359,7 @@ namespace GYM_Application_Project
             // 
             this.panel4.BackColor = System.Drawing.Color.Gray;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Location = new System.Drawing.Point(655, 275);
+            this.panel4.Location = new System.Drawing.Point(655, 336);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(167, 2);
@@ -361,7 +367,7 @@ namespace GYM_Application_Project
             // 
             // panel5
             // 
-            this.panel5.Location = new System.Drawing.Point(885, 275);
+            this.panel5.Location = new System.Drawing.Point(885, 336);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(167, 1);
@@ -371,7 +377,7 @@ namespace GYM_Application_Project
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Location = new System.Drawing.Point(949, 275);
+            this.panel6.Location = new System.Drawing.Point(949, 336);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(167, 2);
@@ -384,7 +390,7 @@ namespace GYM_Application_Project
             this.btn_Finish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Finish.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Finish.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Finish.Location = new System.Drawing.Point(1008, 639);
+            this.btn_Finish.Location = new System.Drawing.Point(1008, 644);
             this.btn_Finish.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Finish.Name = "btn_Finish";
             this.btn_Finish.Size = new System.Drawing.Size(112, 36);
@@ -419,7 +425,7 @@ namespace GYM_Application_Project
             this.txtbox_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_email.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtbox_email.Location = new System.Drawing.Point(751, 155);
+            this.txtbox_email.Location = new System.Drawing.Point(751, 150);
             this.txtbox_email.Margin = new System.Windows.Forms.Padding(4);
             this.txtbox_email.Name = "txtbox_email";
             this.txtbox_email.Size = new System.Drawing.Size(367, 23);
@@ -428,12 +434,13 @@ namespace GYM_Application_Project
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.panel10.Controls.Add(this.panel12);
+            this.panel10.Controls.Add(this.txt_newmail);
+            this.panel10.Controls.Add(this.label1);
+            this.panel10.Controls.Add(this.delete);
+            this.panel10.Controls.Add(this.update);
             this.panel10.Controls.Add(this.panel8);
             this.panel10.Controls.Add(this.lbl_UserPic);
-            this.panel10.Controls.Add(this.rbtn_female);
-            this.panel10.Controls.Add(this.rbtn_male);
-            this.panel10.Controls.Add(this.lbl_gender);
-            this.panel10.Controls.Add(this.label1);
             this.panel10.Controls.Add(this.panel9);
             this.panel10.Controls.Add(this.txtbox_rate);
             this.panel10.Controls.Add(this.txtbox_email);
@@ -459,30 +466,72 @@ namespace GYM_Application_Project
             this.panel10.TabIndex = 36;
             this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
-            // lbl_gender
+            // panel12
             // 
-            this.lbl_gender.AutoSize = true;
-            this.lbl_gender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.lbl_gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_gender.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbl_gender.Location = new System.Drawing.Point(372, 304);
-            this.lbl_gender.Name = "lbl_gender";
-            this.lbl_gender.Size = new System.Drawing.Size(83, 25);
-            this.lbl_gender.TabIndex = 37;
-            this.lbl_gender.Text = "Gender";
-            this.lbl_gender.Click += new System.EventHandler(this.lbl_gender_Click);
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Location = new System.Drawing.Point(377, 256);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(747, 2);
+            this.panel12.TabIndex = 46;
             // 
-            // lbl_UserPic
+            // txt_newmail
             // 
-            this.lbl_UserPic.AutoSize = true;
-            this.lbl_UserPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.lbl_UserPic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_UserPic.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbl_UserPic.Location = new System.Drawing.Point(372, 353);
-            this.lbl_UserPic.Name = "lbl_UserPic";
-            this.lbl_UserPic.Size = new System.Drawing.Size(130, 25);
-            this.lbl_UserPic.TabIndex = 40;
-            this.lbl_UserPic.Text = "User Picture";
+            this.txt_newmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txt_newmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_newmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_newmail.ForeColor = System.Drawing.SystemColors.Window;
+            this.txt_newmail.Location = new System.Drawing.Point(377, 230);
+            this.txt_newmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_newmail.Name = "txt_newmail";
+            this.txt_newmail.Size = new System.Drawing.Size(744, 23);
+            this.txt_newmail.TabIndex = 45;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label1.Location = new System.Drawing.Point(372, 198);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 25);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Email";
+            // 
+            // delete
+            // 
+            this.delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.delete.FlatAppearance.BorderSize = 0;
+            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
+            this.delete.Location = new System.Drawing.Point(859, 639);
+            this.delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(56, 50);
+            this.delete.TabIndex = 42;
+            this.delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
+            // 
+            // update
+            // 
+            this.update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.update.FlatAppearance.BorderSize = 0;
+            this.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.update.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update.Image = ((System.Drawing.Image)(resources.GetObject("update.Image")));
+            this.update.Location = new System.Drawing.Point(927, 639);
+            this.update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(56, 50);
+            this.update.TabIndex = 43;
+            this.update.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.update.UseVisualStyleBackColor = false;
+            this.update.Click += new System.EventHandler(this.update_Click);
             // 
             // panel8
             // 
@@ -493,70 +542,6 @@ namespace GYM_Application_Project
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(744, 224);
             this.panel8.TabIndex = 41;
-            // 
-            // panel11
-            // 
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel11.Controls.Add(this.btn_UserPicUpload);
-            this.panel11.Location = new System.Drawing.Point(-2, 156);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(746, 66);
-            this.panel11.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label1.Location = new System.Drawing.Point(397, 300);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 25);
-            this.label1.TabIndex = 36;
-            // 
-            // rbtn_male
-            // 
-            this.rbtn_male.AutoSize = true;
-            this.rbtn_male.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_male.ForeColor = System.Drawing.SystemColors.Window;
-            this.rbtn_male.Location = new System.Drawing.Point(534, 300);
-            this.rbtn_male.Margin = new System.Windows.Forms.Padding(4);
-            this.rbtn_male.Name = "rbtn_male";
-            this.rbtn_male.Size = new System.Drawing.Size(80, 29);
-            this.rbtn_male.TabIndex = 38;
-            this.rbtn_male.TabStop = true;
-            this.rbtn_male.Text = "Male";
-            this.rbtn_male.UseVisualStyleBackColor = true;
-            // 
-            // rbtn_female
-            // 
-            this.rbtn_female.AutoSize = true;
-            this.rbtn_female.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_female.ForeColor = System.Drawing.SystemColors.Window;
-            this.rbtn_female.Location = new System.Drawing.Point(717, 298);
-            this.rbtn_female.Margin = new System.Windows.Forms.Padding(4);
-            this.rbtn_female.Name = "rbtn_female";
-            this.rbtn_female.Size = new System.Drawing.Size(104, 29);
-            this.rbtn_female.TabIndex = 39;
-            this.rbtn_female.TabStop = true;
-            this.rbtn_female.Text = "Female";
-            this.rbtn_female.UseVisualStyleBackColor = true;
-            // 
-            // btn_UserPicUpload
-            // 
-            this.btn_UserPicUpload.BackColor = System.Drawing.Color.DarkGray;
-            this.btn_UserPicUpload.FlatAppearance.BorderSize = 0;
-            this.btn_UserPicUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_UserPicUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_UserPicUpload.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_UserPicUpload.Location = new System.Drawing.Point(599, 9);
-            this.btn_UserPicUpload.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_UserPicUpload.Name = "btn_UserPicUpload";
-            this.btn_UserPicUpload.Size = new System.Drawing.Size(127, 39);
-            this.btn_UserPicUpload.TabIndex = 27;
-            this.btn_UserPicUpload.Text = "Upload";
-            this.btn_UserPicUpload.UseVisualStyleBackColor = false;
-            this.btn_UserPicUpload.Click += new System.EventHandler(this.btn_UserPicUpload_Click);
             // 
             // panel7
             // 
@@ -576,6 +561,43 @@ namespace GYM_Application_Project
             this.pb_Image.TabIndex = 0;
             this.pb_Image.TabStop = false;
             // 
+            // panel11
+            // 
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel11.Controls.Add(this.btn_UserPicUpload);
+            this.panel11.Location = new System.Drawing.Point(-2, 156);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(746, 66);
+            this.panel11.TabIndex = 0;
+            // 
+            // btn_UserPicUpload
+            // 
+            this.btn_UserPicUpload.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_UserPicUpload.FlatAppearance.BorderSize = 0;
+            this.btn_UserPicUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_UserPicUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_UserPicUpload.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_UserPicUpload.Location = new System.Drawing.Point(599, 9);
+            this.btn_UserPicUpload.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_UserPicUpload.Name = "btn_UserPicUpload";
+            this.btn_UserPicUpload.Size = new System.Drawing.Size(127, 39);
+            this.btn_UserPicUpload.TabIndex = 27;
+            this.btn_UserPicUpload.Text = "Upload";
+            this.btn_UserPicUpload.UseVisualStyleBackColor = false;
+            this.btn_UserPicUpload.Click += new System.EventHandler(this.btn_UserPicUpload_Click);
+            // 
+            // lbl_UserPic
+            // 
+            this.lbl_UserPic.AutoSize = true;
+            this.lbl_UserPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.lbl_UserPic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_UserPic.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lbl_UserPic.Location = new System.Drawing.Point(372, 353);
+            this.lbl_UserPic.Name = "lbl_UserPic";
+            this.lbl_UserPic.Size = new System.Drawing.Size(130, 25);
+            this.lbl_UserPic.TabIndex = 40;
+            this.lbl_UserPic.Text = "User Picture";
+            // 
             // TrainersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -585,6 +607,7 @@ namespace GYM_Application_Project
             this.ClientSize = new System.Drawing.Size(1181, 703);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel10);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TrainersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -595,9 +618,9 @@ namespace GYM_Application_Project
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel8.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).EndInit();
+            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -631,15 +654,16 @@ namespace GYM_Application_Project
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox txtbox_email;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label lbl_gender;
         private System.Windows.Forms.Label lbl_UserPic;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.RadioButton rbtn_female;
-        private System.Windows.Forms.RadioButton rbtn_male;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_UserPicUpload;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pb_Image;
+        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.Button update;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.TextBox txt_newmail;
+        private System.Windows.Forms.Label label1;
     }
 }
