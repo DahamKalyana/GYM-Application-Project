@@ -52,5 +52,35 @@ namespace GYM_Application_Project
             payments.Show();
             this.Hide();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Payments_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PaymentsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textsearchbar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Payments_Shown(object sender, EventArgs e)
+        {
+
+        }
     }
 }
