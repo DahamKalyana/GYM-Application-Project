@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GYM_Application_Project;
 
 namespace GYM_Application_Project
 {
@@ -16,6 +18,49 @@ namespace GYM_Application_Project
         {
             InitializeComponent();
         }
+
+        public void GenerateDynamicUSerControlMembers()
+        {
+            flowLayoutProfile.Controls.Clear();
+
+
+            ClassBLL1 objbll = new ClassBLL1();
+            DataTable dt = objbll.GetItems();
+
+            if (dt != null)
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    profileuser[] listItems = new profileuser[dt.Rows.Count];
+
+                    for (int i = 0; i < 1; i++)
+                    {
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            listItems[i] = new profileuser();
+
+                            MemoryStream ms = new MemoryStream((byte[])row["image"]);
+                            listItems[i].Icon = new Bitmap(ms);
+
+                            listItems[i].Name = row["name"].ToString();
+                            listItems[i].Email = row["email"].ToString();
+                            listItems[i].Age = row["age"].ToString();
+
+                            flowLayoutProfile.Controls.Add(listItems[i]);
+
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        private void Profile_Load(object sender, EventArgs e)
+        {
+            GenerateDynamicUSerControlMembers();
+        }
+
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
@@ -50,5 +95,6 @@ namespace GYM_Application_Project
             payments.Show();
             this.Hide();
         }
+
     }
 }

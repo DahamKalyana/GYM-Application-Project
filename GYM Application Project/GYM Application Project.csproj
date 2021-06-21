@@ -86,6 +86,9 @@
     <Compile Include="Profile.Designer.cs">
       <DependentUpon>Profile.cs</DependentUpon>
     </Compile>
+    <Compile Include="profileBLL\profileClassBLL.cs" />
+    <Compile Include="profileDAL\profileclassDAL.cs" />
+    <Compile Include="profileDAL\profileconnections.cs" />
     <Compile Include="profileuser.cs">
       <SubType>UserControl</SubType>
     </Compile>
