@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace GYM_Application_Project
 {
@@ -17,7 +18,7 @@ namespace GYM_Application_Project
         {
             InitializeComponent();
         }
-        SqlConnection connection = new SqlConnection(""); // Add connection string here
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Users.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void Tuser_Enter(object sender, EventArgs e)
         {
@@ -49,7 +50,7 @@ namespace GYM_Application_Project
 
         private void showErrorMsg()
         {
-            MessageBox.Show("Login Faild. Try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Login Faild. Try again", "Error",  MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void login()
@@ -57,10 +58,10 @@ namespace GYM_Application_Project
             try
             {
                 connection.Open();
-                String query = "select id from users where username = '" + Tuser.Text.Trim() + "' and password = '" + Tpass.Text.Trim() + "'";
+                String query = "select id from users where username = '" + Tuser.Text.Trim() + "' and password = '"+Tpass.Text.Trim()+"'";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 SqlDataReader reader = cmd.ExecuteReader();
-
+                
                 if (!reader.HasRows)
                 {
                     showErrorMsg();
@@ -70,8 +71,8 @@ namespace GYM_Application_Project
                     Form1 dashboard = new Form1();
                     dashboard.Show();
                     this.Hide();
-                }
-                connection.Close();
+            }
+            connection.Close();
             }
 
             catch
@@ -84,11 +85,6 @@ namespace GYM_Application_Project
         {
             Tpass.Text = "";
             Tpass.PasswordChar = '*';
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
