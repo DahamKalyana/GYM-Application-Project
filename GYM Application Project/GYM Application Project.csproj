@@ -126,11 +126,41 @@
     <Compile Include="Trainer.Designer.cs">
       <DependentUpon>Trainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="TrainerDeleteMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainerDeleteMsg.Designer.cs">
+      <DependentUpon>TrainerDeleteMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainerFailMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainerFailMsg.Designer.cs">
+      <DependentUpon>TrainerFailMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainerFillAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainerFillAll.Designer.cs">
+      <DependentUpon>TrainerFillAll.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrainersForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TrainersForm.Designer.cs">
       <DependentUpon>TrainersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainerSuccessMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainerSuccessMsg.Designer.cs">
+      <DependentUpon>TrainerSuccessMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainerUpdateMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainerUpdateMsg.Designer.cs">
+      <DependentUpon>TrainerUpdateMsg.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -166,10 +196,28 @@
     <EmbeddedResource Include="Trainer.resx">
       <DependentUpon>Trainer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TrainerDeleteMsg.resx">
+      <DependentUpon>TrainerDeleteMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainerFailMsg.resx">
+      <DependentUpon>TrainerFailMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainerFillAll.resx">
+      <DependentUpon>TrainerFillAll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrainersForm.resx">
       <DependentUpon>TrainersForm.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <None Include="packages.config" />
+=======
+    <EmbeddedResource Include="TrainerSuccessMsg.resx">
+      <DependentUpon>TrainerSuccessMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainerUpdateMsg.resx">
+      <DependentUpon>TrainerUpdateMsg.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> c0cd09459b0186e35a01ba8ec3884bdbfefb72dd
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

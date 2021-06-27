@@ -43,7 +43,7 @@ namespace GYM_Application_Project
             this.lbl_age = new System.Windows.Forms.Label();
             this.lbl_exp = new System.Windows.Forms.Label();
             this.lbl_rate = new System.Windows.Forms.Label();
-            this.txtbox_name = new System.Windows.Forms.TextBox();
+            this.txtbox_trainerid = new System.Windows.Forms.TextBox();
             this.lbl_trainer = new System.Windows.Forms.Label();
             this.txtbox_age = new System.Windows.Forms.TextBox();
             this.txtbox_exp = new System.Windows.Forms.TextBox();
@@ -55,10 +55,10 @@ namespace GYM_Application_Project
             this.btn_Finish = new System.Windows.Forms.Button();
             this.panel_fname = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.txtbox_email = new System.Windows.Forms.TextBox();
+            this.txtbox_name = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.txt_newmail = new System.Windows.Forms.TextBox();
+            this.txt_email = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.delete = new System.Windows.Forms.Button();
             this.update = new System.Windows.Forms.Button();
@@ -68,6 +68,7 @@ namespace GYM_Application_Project
             this.panel11 = new System.Windows.Forms.Panel();
             this.btn_UserPicUpload = new System.Windows.Forms.Button();
             this.lbl_UserPic = new System.Windows.Forms.Label();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -285,17 +286,18 @@ namespace GYM_Application_Project
             this.lbl_rate.Text = "Rate(LKR)";
             this.lbl_rate.Click += new System.EventHandler(this.lbl_rate_Click);
             // 
-            // txtbox_name
+            // txtbox_trainerid
             // 
-            this.txtbox_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txtbox_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbox_name.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtbox_name.Location = new System.Drawing.Point(377, 150);
-            this.txtbox_name.Margin = new System.Windows.Forms.Padding(4);
-            this.txtbox_name.Name = "txtbox_name";
-            this.txtbox_name.Size = new System.Drawing.Size(300, 23);
-            this.txtbox_name.TabIndex = 12;
+            this.txtbox_trainerid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtbox_trainerid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbox_trainerid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_trainerid.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtbox_trainerid.Location = new System.Drawing.Point(377, 150);
+            this.txtbox_trainerid.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbox_trainerid.Name = "txtbox_trainerid";
+            this.txtbox_trainerid.Size = new System.Drawing.Size(300, 23);
+            this.txtbox_trainerid.TabIndex = 12;
+            this.txtbox_trainerid.TextChanged += new System.EventHandler(this.txtbox_trainerid_TextChanged);
             // 
             // lbl_trainer
             // 
@@ -419,23 +421,24 @@ namespace GYM_Application_Project
             this.panel9.Size = new System.Drawing.Size(370, 2);
             this.panel9.TabIndex = 35;
             // 
-            // txtbox_email
+            // txtbox_name
             // 
-            this.txtbox_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txtbox_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbox_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbox_email.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtbox_email.Location = new System.Drawing.Point(751, 150);
-            this.txtbox_email.Margin = new System.Windows.Forms.Padding(4);
-            this.txtbox_email.Name = "txtbox_email";
-            this.txtbox_email.Size = new System.Drawing.Size(367, 23);
-            this.txtbox_email.TabIndex = 34;
+            this.txtbox_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtbox_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_name.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtbox_name.Location = new System.Drawing.Point(751, 150);
+            this.txtbox_name.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbox_name.Name = "txtbox_name";
+            this.txtbox_name.Size = new System.Drawing.Size(367, 23);
+            this.txtbox_name.TabIndex = 34;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.panel10.Controls.Add(this.btn_clear);
             this.panel10.Controls.Add(this.panel12);
-            this.panel10.Controls.Add(this.txt_newmail);
+            this.panel10.Controls.Add(this.txt_email);
             this.panel10.Controls.Add(this.label1);
             this.panel10.Controls.Add(this.delete);
             this.panel10.Controls.Add(this.update);
@@ -443,7 +446,7 @@ namespace GYM_Application_Project
             this.panel10.Controls.Add(this.lbl_UserPic);
             this.panel10.Controls.Add(this.panel9);
             this.panel10.Controls.Add(this.txtbox_rate);
-            this.panel10.Controls.Add(this.txtbox_email);
+            this.panel10.Controls.Add(this.txtbox_name);
             this.panel10.Controls.Add(this.panel6);
             this.panel10.Controls.Add(this.panel5);
             this.panel10.Controls.Add(this.lbl_fname);
@@ -453,7 +456,7 @@ namespace GYM_Application_Project
             this.panel10.Controls.Add(this.lbl_exp);
             this.panel10.Controls.Add(this.lbl_rate);
             this.panel10.Controls.Add(this.panel4);
-            this.panel10.Controls.Add(this.txtbox_name);
+            this.panel10.Controls.Add(this.txtbox_trainerid);
             this.panel10.Controls.Add(this.panel3);
             this.panel10.Controls.Add(this.lbl_trainer);
             this.panel10.Controls.Add(this.txtbox_exp);
@@ -476,17 +479,17 @@ namespace GYM_Application_Project
             this.panel12.Size = new System.Drawing.Size(747, 2);
             this.panel12.TabIndex = 46;
             // 
-            // txt_newmail
+            // txt_email
             // 
-            this.txt_newmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txt_newmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_newmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_newmail.ForeColor = System.Drawing.SystemColors.Window;
-            this.txt_newmail.Location = new System.Drawing.Point(377, 230);
-            this.txt_newmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_newmail.Name = "txt_newmail";
-            this.txt_newmail.Size = new System.Drawing.Size(744, 23);
-            this.txt_newmail.TabIndex = 45;
+            this.txt_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_email.ForeColor = System.Drawing.SystemColors.Window;
+            this.txt_email.Location = new System.Drawing.Point(377, 230);
+            this.txt_email.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(744, 23);
+            this.txt_email.TabIndex = 45;
             // 
             // label1
             // 
@@ -508,7 +511,7 @@ namespace GYM_Application_Project
             this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
-            this.delete.Location = new System.Drawing.Point(859, 639);
+            this.delete.Location = new System.Drawing.Point(714, 638);
             this.delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(56, 50);
@@ -524,7 +527,7 @@ namespace GYM_Application_Project
             this.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.update.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update.Image = ((System.Drawing.Image)(resources.GetObject("update.Image")));
-            this.update.Location = new System.Drawing.Point(927, 639);
+            this.update.Location = new System.Drawing.Point(782, 638);
             this.update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(56, 50);
@@ -598,6 +601,17 @@ namespace GYM_Application_Project
             this.lbl_UserPic.TabIndex = 40;
             this.lbl_UserPic.Text = "User Picture";
             // 
+            // btn_clear
+            // 
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.Location = new System.Drawing.Point(850, 644);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(139, 36);
+            this.btn_clear.TabIndex = 47;
+            this.btn_clear.Text = "Clear All";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
+            // 
             // TrainersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -640,7 +654,7 @@ namespace GYM_Application_Project
         private System.Windows.Forms.Label lbl_age;
         private System.Windows.Forms.Label lbl_exp;
         private System.Windows.Forms.Label lbl_rate;
-        private System.Windows.Forms.TextBox txtbox_name;
+        private System.Windows.Forms.TextBox txtbox_trainerid;
         private System.Windows.Forms.Label lbl_trainer;
         private System.Windows.Forms.TextBox txtbox_age;
         private System.Windows.Forms.TextBox txtbox_exp;
@@ -652,7 +666,7 @@ namespace GYM_Application_Project
         private System.Windows.Forms.Button btn_Finish;
         private System.Windows.Forms.Panel panel_fname;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox txtbox_email;
+        private System.Windows.Forms.TextBox txtbox_name;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label lbl_UserPic;
         private System.Windows.Forms.Panel panel8;
@@ -663,7 +677,8 @@ namespace GYM_Application_Project
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Button update;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox txt_newmail;
+        private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_clear;
     }
 }

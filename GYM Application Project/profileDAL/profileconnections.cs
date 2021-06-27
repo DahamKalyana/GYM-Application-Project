@@ -9,6 +9,6 @@ namespace GYM_Application_Project.profileDAL
 {
     class profileconnections
     {
-        public SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\profiledb\profilememdb.mdf;Integrated Security=True;Connect Timeout=30");
+        public SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\DB_Items.mdf;Integrated Security=True;Connect Timeout=30");
     }
 }

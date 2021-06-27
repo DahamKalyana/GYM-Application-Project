@@ -24,7 +24,7 @@ namespace GYM_Application_Project
             flowLayoutProfile.Controls.Clear();
 
 
-            ClassBLL1 objbll = new ClassBLL1();
+            profileBLL.profileClassBLL objbll = new profileBLL.profileClassBLL();
             DataTable dt = objbll.GetItems();
 
             if (dt != null)

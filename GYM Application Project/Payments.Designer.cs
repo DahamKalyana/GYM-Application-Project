@@ -30,10 +30,6 @@ namespace GYM_Application_Project
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Payments));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PaymentButton = new System.Windows.Forms.Button();
             this.TrainersButton = new System.Windows.Forms.Button();
@@ -43,32 +39,45 @@ namespace GYM_Application_Project
             this.DashboardLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PaymentsPanel = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnsearch = new System.Windows.Forms.Button();
-            this.textsearchbar = new System.Windows.Forms.TextBox();
+            this.cb_december = new System.Windows.Forms.CheckBox();
+            this.cb_june = new System.Windows.Forms.CheckBox();
+            this.cb_october = new System.Windows.Forms.CheckBox();
+            this.cb_april = new System.Windows.Forms.CheckBox();
+            this.cb_august = new System.Windows.Forms.CheckBox();
+            this.cb_february = new System.Windows.Forms.CheckBox();
+            this.cb_november = new System.Windows.Forms.CheckBox();
+            this.cb_september = new System.Windows.Forms.CheckBox();
+            this.cb_may = new System.Windows.Forms.CheckBox();
+            this.cb_july = new System.Windows.Forms.CheckBox();
+            this.cb_march = new System.Windows.Forms.CheckBox();
+            this.cb_january = new System.Windows.Forms.CheckBox();
+            this.btnclear = new System.Windows.Forms.Button();
+            this.btnpayment = new System.Windows.Forms.Button();
+            this.txtmemberid = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.lblemail = new System.Windows.Forms.Label();
+            this.lblname = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pb_memicon = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.PaymentsPanel.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_memicon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -211,7 +220,6 @@ namespace GYM_Application_Project
             // 
             this.PaymentsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.PaymentsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.PaymentsPanel.Controls.Add(this.panel4);
             this.PaymentsPanel.Controls.Add(this.panel3);
             this.PaymentsPanel.Controls.Add(this.label1);
             this.PaymentsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -219,220 +227,403 @@ namespace GYM_Application_Project
             this.PaymentsPanel.ForeColor = System.Drawing.Color.Black;
             this.PaymentsPanel.Location = new System.Drawing.Point(326, 0);
             this.PaymentsPanel.Name = "PaymentsPanel";
-            this.PaymentsPanel.Size = new System.Drawing.Size(856, 703);
+            this.PaymentsPanel.Size = new System.Drawing.Size(855, 703);
             this.PaymentsPanel.TabIndex = 1;
             this.PaymentsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PaymentsPanel_Paint);
             // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.dataGridView1);
-            this.panel4.Location = new System.Drawing.Point(3, 108);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(850, 605);
-            this.panel4.TabIndex = 7;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeight = 42;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column1,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13,
-            this.Column14,
-            this.Column15});
-            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.PowderBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 38);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 65;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(847, 556);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "UID";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Name";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Contact No";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Jan";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Feb";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "March";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "April";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "May";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "June";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "July";
-            this.Column10.MinimumWidth = 6;
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Aug";
-            this.Column11.MinimumWidth = 6;
-            this.Column11.Name = "Column11";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Sept";
-            this.Column12.MinimumWidth = 6;
-            this.Column12.Name = "Column12";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Oct";
-            this.Column13.MinimumWidth = 6;
-            this.Column13.Name = "Column13";
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Nov";
-            this.Column14.MinimumWidth = 6;
-            this.Column14.Name = "Column14";
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "Dec";
-            this.Column15.MinimumWidth = 6;
-            this.Column15.Name = "Column15";
-            // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.btnsearch);
-            this.panel3.Controls.Add(this.textsearchbar);
-            this.panel3.Location = new System.Drawing.Point(469, 40);
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.pb_memicon);
+            this.panel3.Controls.Add(this.cb_december);
+            this.panel3.Controls.Add(this.cb_june);
+            this.panel3.Controls.Add(this.cb_october);
+            this.panel3.Controls.Add(this.cb_april);
+            this.panel3.Controls.Add(this.cb_august);
+            this.panel3.Controls.Add(this.cb_february);
+            this.panel3.Controls.Add(this.cb_november);
+            this.panel3.Controls.Add(this.cb_september);
+            this.panel3.Controls.Add(this.cb_may);
+            this.panel3.Controls.Add(this.cb_july);
+            this.panel3.Controls.Add(this.cb_march);
+            this.panel3.Controls.Add(this.cb_january);
+            this.panel3.Controls.Add(this.btnclear);
+            this.panel3.Controls.Add(this.btnpayment);
+            this.panel3.Controls.Add(this.txtmemberid);
+            this.panel3.Controls.Add(this.label22);
+            this.panel3.Controls.Add(this.lblemail);
+            this.panel3.Controls.Add(this.lblname);
+            this.panel3.Controls.Add(this.label21);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label19);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.label18);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Location = new System.Drawing.Point(38, 120);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(375, 100);
+            this.panel3.Size = new System.Drawing.Size(778, 571);
             this.panel3.TabIndex = 6;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // btnsearch
+            // cb_december
             // 
-            this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnsearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnsearch.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnsearch.FlatAppearance.BorderSize = 0;
-            this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsearch.ForeColor = System.Drawing.Color.Black;
-            this.btnsearch.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btnsearch.Location = new System.Drawing.Point(269, 32);
-            this.btnsearch.Name = "btnsearch";
-            this.btnsearch.Size = new System.Drawing.Size(93, 30);
-            this.btnsearch.TabIndex = 9;
-            this.btnsearch.Text = "Search";
-            this.btnsearch.UseVisualStyleBackColor = false;
+            this.cb_december.AutoSize = true;
+            this.cb_december.Location = new System.Drawing.Point(535, 412);
+            this.cb_december.Name = "cb_december";
+            this.cb_december.Size = new System.Drawing.Size(18, 17);
+            this.cb_december.TabIndex = 7;
+            this.cb_december.UseVisualStyleBackColor = true;
             // 
-            // textsearchbar
+            // cb_june
             // 
-            this.textsearchbar.BackColor = System.Drawing.SystemColors.Window;
-            this.textsearchbar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textsearchbar.Location = new System.Drawing.Point(3, 33);
-            this.textsearchbar.Name = "textsearchbar";
-            this.textsearchbar.Size = new System.Drawing.Size(245, 27);
-            this.textsearchbar.TabIndex = 10;
-            this.textsearchbar.TextChanged += new System.EventHandler(this.textsearchbar_TextChanged);
+            this.cb_june.AutoSize = true;
+            this.cb_june.Location = new System.Drawing.Point(197, 410);
+            this.cb_june.Name = "cb_june";
+            this.cb_june.Size = new System.Drawing.Size(18, 17);
+            this.cb_june.TabIndex = 7;
+            this.cb_june.UseVisualStyleBackColor = true;
+            // 
+            // cb_october
+            // 
+            this.cb_october.AutoSize = true;
+            this.cb_october.Location = new System.Drawing.Point(535, 327);
+            this.cb_october.Name = "cb_october";
+            this.cb_october.Size = new System.Drawing.Size(18, 17);
+            this.cb_october.TabIndex = 7;
+            this.cb_october.UseVisualStyleBackColor = true;
+            // 
+            // cb_april
+            // 
+            this.cb_april.AutoSize = true;
+            this.cb_april.Location = new System.Drawing.Point(197, 325);
+            this.cb_april.Name = "cb_april";
+            this.cb_april.Size = new System.Drawing.Size(18, 17);
+            this.cb_april.TabIndex = 7;
+            this.cb_april.UseVisualStyleBackColor = true;
+            // 
+            // cb_august
+            // 
+            this.cb_august.AutoSize = true;
+            this.cb_august.Location = new System.Drawing.Point(535, 240);
+            this.cb_august.Name = "cb_august";
+            this.cb_august.Size = new System.Drawing.Size(18, 17);
+            this.cb_august.TabIndex = 7;
+            this.cb_august.UseVisualStyleBackColor = true;
+            // 
+            // cb_february
+            // 
+            this.cb_february.AutoSize = true;
+            this.cb_february.Location = new System.Drawing.Point(197, 238);
+            this.cb_february.Name = "cb_february";
+            this.cb_february.Size = new System.Drawing.Size(18, 17);
+            this.cb_february.TabIndex = 7;
+            this.cb_february.UseVisualStyleBackColor = true;
+            // 
+            // cb_november
+            // 
+            this.cb_november.AutoSize = true;
+            this.cb_november.Location = new System.Drawing.Point(535, 370);
+            this.cb_november.Name = "cb_november";
+            this.cb_november.Size = new System.Drawing.Size(18, 17);
+            this.cb_november.TabIndex = 8;
+            this.cb_november.UseVisualStyleBackColor = true;
+            this.cb_november.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
+            // 
+            // cb_september
+            // 
+            this.cb_september.AutoSize = true;
+            this.cb_september.Location = new System.Drawing.Point(535, 285);
+            this.cb_september.Name = "cb_september";
+            this.cb_september.Size = new System.Drawing.Size(18, 17);
+            this.cb_september.TabIndex = 8;
+            this.cb_september.UseVisualStyleBackColor = true;
+            this.cb_september.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
+            // 
+            // cb_may
+            // 
+            this.cb_may.AutoSize = true;
+            this.cb_may.Location = new System.Drawing.Point(197, 368);
+            this.cb_may.Name = "cb_may";
+            this.cb_may.Size = new System.Drawing.Size(18, 17);
+            this.cb_may.TabIndex = 8;
+            this.cb_may.UseVisualStyleBackColor = true;
+            this.cb_may.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
+            // 
+            // cb_july
+            // 
+            this.cb_july.AutoSize = true;
+            this.cb_july.Location = new System.Drawing.Point(535, 198);
+            this.cb_july.Name = "cb_july";
+            this.cb_july.Size = new System.Drawing.Size(18, 17);
+            this.cb_july.TabIndex = 8;
+            this.cb_july.UseVisualStyleBackColor = true;
+            this.cb_july.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
+            // 
+            // cb_march
+            // 
+            this.cb_march.AutoSize = true;
+            this.cb_march.Location = new System.Drawing.Point(197, 283);
+            this.cb_march.Name = "cb_march";
+            this.cb_march.Size = new System.Drawing.Size(18, 17);
+            this.cb_march.TabIndex = 8;
+            this.cb_march.UseVisualStyleBackColor = true;
+            this.cb_march.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
+            // 
+            // cb_january
+            // 
+            this.cb_january.AutoSize = true;
+            this.cb_january.Location = new System.Drawing.Point(197, 196);
+            this.cb_january.Name = "cb_january";
+            this.cb_january.Size = new System.Drawing.Size(18, 17);
+            this.cb_january.TabIndex = 8;
+            this.cb_january.UseVisualStyleBackColor = true;
+            this.cb_january.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
+            // 
+            // btnclear
+            // 
+            this.btnclear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnclear.FlatAppearance.BorderSize = 0;
+            this.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnclear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclear.ForeColor = System.Drawing.Color.White;
+            this.btnclear.Location = new System.Drawing.Point(400, 507);
+            this.btnclear.Name = "btnclear";
+            this.btnclear.Size = new System.Drawing.Size(199, 37);
+            this.btnclear.TabIndex = 8;
+            this.btnclear.Text = "Clear";
+            this.btnclear.UseVisualStyleBackColor = false;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
+            // 
+            // btnpayment
+            // 
+            this.btnpayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnpayment.FlatAppearance.BorderSize = 0;
+            this.btnpayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnpayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpayment.ForeColor = System.Drawing.Color.Black;
+            this.btnpayment.Location = new System.Drawing.Point(168, 508);
+            this.btnpayment.Name = "btnpayment";
+            this.btnpayment.Size = new System.Drawing.Size(199, 37);
+            this.btnpayment.TabIndex = 8;
+            this.btnpayment.Text = "Update Payment";
+            this.btnpayment.UseVisualStyleBackColor = false;
+            this.btnpayment.Click += new System.EventHandler(this.btnpayment_Click);
+            // 
+            // txtmemberid
+            // 
+            this.txtmemberid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtmemberid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtmemberid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtmemberid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmemberid.ForeColor = System.Drawing.Color.White;
+            this.txtmemberid.Location = new System.Drawing.Point(168, 15);
+            this.txtmemberid.Name = "txtmemberid";
+            this.txtmemberid.Size = new System.Drawing.Size(199, 30);
+            this.txtmemberid.TabIndex = 6;
+            this.txtmemberid.TextChanged += new System.EventHandler(this.txtmemberid_TextChanged);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label22.Location = new System.Drawing.Point(415, 418);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(87, 20);
+            this.label22.TabIndex = 5;
+            this.label22.Text = "December";
+            // 
+            // lblemail
+            // 
+            this.lblemail.AutoSize = true;
+            this.lblemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblemail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblemail.Location = new System.Drawing.Point(182, 120);
+            this.lblemail.Name = "lblemail";
+            this.lblemail.Size = new System.Drawing.Size(65, 25);
+            this.lblemail.TabIndex = 5;
+            this.lblemail.Text = "Email";
+            // 
+            // lblname
+            // 
+            this.lblname.AutoSize = true;
+            this.lblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblname.Location = new System.Drawing.Point(115, 78);
+            this.lblname.Name = "lblname";
+            this.lblname.Size = new System.Drawing.Size(152, 25);
+            this.lblname.TabIndex = 5;
+            this.lblname.Text = "Member Name";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label21.Location = new System.Drawing.Point(415, 286);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(90, 20);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "September";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label13.Location = new System.Drawing.Point(90, 414);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(45, 20);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "June";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label20.Location = new System.Drawing.Point(415, 374);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(85, 20);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "November";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label9.Location = new System.Drawing.Point(90, 282);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 20);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "March";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label19.Location = new System.Drawing.Point(415, 242);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(61, 20);
+            this.label19.TabIndex = 5;
+            this.label19.Text = "August";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label12.Location = new System.Drawing.Point(90, 370);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 20);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "May";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label18.Location = new System.Drawing.Point(415, 332);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(69, 20);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "October";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label7.Location = new System.Drawing.Point(90, 238);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 20);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "February";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label17.Location = new System.Drawing.Point(415, 200);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(39, 20);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "July";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label11.Location = new System.Drawing.Point(90, 328);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(43, 20);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "April";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.Location = new System.Drawing.Point(90, 196);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 20);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "January";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.Location = new System.Drawing.Point(13, 120);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(162, 25);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Member Email :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Location = new System.Drawing.Point(13, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 25);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Name :";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(13, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 25);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Member ID";
             // 
             // label1
             // 
@@ -445,11 +636,21 @@ namespace GYM_Application_Project
             this.label1.TabIndex = 5;
             this.label1.Text = "Payments";
             // 
+            // pb_memicon
+            // 
+            this.pb_memicon.Image = ((System.Drawing.Image)(resources.GetObject("pb_memicon.Image")));
+            this.pb_memicon.Location = new System.Drawing.Point(626, 15);
+            this.pb_memicon.Name = "pb_memicon";
+            this.pb_memicon.Size = new System.Drawing.Size(130, 130);
+            this.pb_memicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_memicon.TabIndex = 9;
+            this.pb_memicon.TabStop = false;
+            // 
             // Payments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 703);
+            this.ClientSize = new System.Drawing.Size(1181, 703);
             this.Controls.Add(this.PaymentsPanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -462,10 +663,9 @@ namespace GYM_Application_Project
             this.panel1.PerformLayout();
             this.PaymentsPanel.ResumeLayout(false);
             this.PaymentsPanel.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_memicon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -483,24 +683,38 @@ namespace GYM_Application_Project
         public System.Windows.Forms.Panel PaymentsPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnsearch;
-        private System.Windows.Forms.TextBox textsearchbar;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column15;
+        private System.Windows.Forms.TextBox txtmemberid;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblname;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnclear;
+        private System.Windows.Forms.Button btnpayment;
+        private System.Windows.Forms.Label lblemail;
+        private System.Windows.Forms.CheckBox cb_february;
+        private System.Windows.Forms.CheckBox cb_january;
+        private System.Windows.Forms.CheckBox cb_december;
+        private System.Windows.Forms.CheckBox cb_june;
+        private System.Windows.Forms.CheckBox cb_october;
+        private System.Windows.Forms.CheckBox cb_april;
+        private System.Windows.Forms.CheckBox cb_august;
+        private System.Windows.Forms.CheckBox cb_november;
+        private System.Windows.Forms.CheckBox cb_september;
+        private System.Windows.Forms.CheckBox cb_may;
+        private System.Windows.Forms.CheckBox cb_july;
+        private System.Windows.Forms.CheckBox cb_march;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pb_memicon;
     }
 }
