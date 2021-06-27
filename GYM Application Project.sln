@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31005.135
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1525
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GYM Application Project", "GYM Application Project\GYM Application Project.csproj", "{4A1A47A7-0D29-465F-9C3E-3BC2D9878B13}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "form_add", "..\..\..\source\repos\form_add\form_add.sqlproj", "{2F8033B4-9F06-46C8-BCB6-2F59D314456D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,12 @@ Global
 		{4A1A47A7-0D29-465F-9C3E-3BC2D9878B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A1A47A7-0D29-465F-9C3E-3BC2D9878B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A1A47A7-0D29-465F-9C3E-3BC2D9878B13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F8033B4-9F06-46C8-BCB6-2F59D314456D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F8033B4-9F06-46C8-BCB6-2F59D314456D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F8033B4-9F06-46C8-BCB6-2F59D314456D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2F8033B4-9F06-46C8-BCB6-2F59D314456D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F8033B4-9F06-46C8-BCB6-2F59D314456D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F8033B4-9F06-46C8-BCB6-2F59D314456D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

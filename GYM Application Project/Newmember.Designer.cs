@@ -256,6 +256,7 @@ namespace GYM_Application_Project
             this.NewmemberPanel.Name = "NewmemberPanel";
             this.NewmemberPanel.Size = new System.Drawing.Size(642, 571);
             this.NewmemberPanel.TabIndex = 2;
+            this.NewmemberPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.NewmemberPanel_Paint);
             // 
             // label13
             // 
@@ -492,6 +493,7 @@ namespace GYM_Application_Project
             this.txt_height.Size = new System.Drawing.Size(108, 31);
             this.txt_height.TabIndex = 50;
             this.txt_height.Text = "";
+            this.txt_height.TextChanged += new System.EventHandler(this.txt_height_TextChanged);
             // 
             // txt_email
             // 
@@ -552,6 +554,7 @@ namespace GYM_Application_Project
             this.btn_next.TabIndex = 45;
             this.btn_next.Text = "SUBMIT";
             this.btn_next.UseVisualStyleBackColor = false;
+            this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
             // 
             // label8
             // 
