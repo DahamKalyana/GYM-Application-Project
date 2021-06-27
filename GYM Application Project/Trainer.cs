@@ -46,6 +46,7 @@ namespace GYM_Application_Project
                             listItems[i].Name = row["Name"].ToString();
                             listItems[i].Email = row["Email"].ToString();
                             listItems[i].Rate = row["Rate"].ToString();
+                            listItems[i].TrainerID = row["TrainerID"].ToString();
 
                             flowLayoutPanel1.Controls.Add(listItems[i]);
 

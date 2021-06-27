@@ -40,6 +40,18 @@ namespace GYM_Application_Project
             this.panel1 = new System.Windows.Forms.Panel();
             this.PaymentsPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cb_december = new System.Windows.Forms.CheckBox();
+            this.cb_june = new System.Windows.Forms.CheckBox();
+            this.cb_october = new System.Windows.Forms.CheckBox();
+            this.cb_april = new System.Windows.Forms.CheckBox();
+            this.cb_august = new System.Windows.Forms.CheckBox();
+            this.cb_february = new System.Windows.Forms.CheckBox();
+            this.cb_november = new System.Windows.Forms.CheckBox();
+            this.cb_september = new System.Windows.Forms.CheckBox();
+            this.cb_may = new System.Windows.Forms.CheckBox();
+            this.cb_july = new System.Windows.Forms.CheckBox();
+            this.cb_march = new System.Windows.Forms.CheckBox();
+            this.cb_january = new System.Windows.Forms.CheckBox();
             this.btnclear = new System.Windows.Forms.Button();
             this.btnpayment = new System.Windows.Forms.Button();
             this.txtmemberid = new System.Windows.Forms.TextBox();
@@ -47,35 +59,25 @@ namespace GYM_Application_Project
             this.lblemail = new System.Windows.Forms.Label();
             this.lblname = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cb_february = new System.Windows.Forms.CheckBox();
-            this.cb_january = new System.Windows.Forms.CheckBox();
-            this.cb_march = new System.Windows.Forms.CheckBox();
-            this.cb_april = new System.Windows.Forms.CheckBox();
-            this.cb_may = new System.Windows.Forms.CheckBox();
-            this.cb_june = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cb_july = new System.Windows.Forms.CheckBox();
-            this.cb_september = new System.Windows.Forms.CheckBox();
-            this.cb_november = new System.Windows.Forms.CheckBox();
-            this.cb_august = new System.Windows.Forms.CheckBox();
-            this.cb_october = new System.Windows.Forms.CheckBox();
-            this.cb_december = new System.Windows.Forms.CheckBox();
+            this.pb_memicon = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.PaymentsPanel.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_memicon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -235,6 +237,7 @@ namespace GYM_Application_Project
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.pb_memicon);
             this.panel3.Controls.Add(this.cb_december);
             this.panel3.Controls.Add(this.cb_june);
             this.panel3.Controls.Add(this.cb_october);
@@ -273,14 +276,128 @@ namespace GYM_Application_Project
             this.panel3.TabIndex = 6;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // cb_december
+            // 
+            this.cb_december.AutoSize = true;
+            this.cb_december.Location = new System.Drawing.Point(535, 412);
+            this.cb_december.Name = "cb_december";
+            this.cb_december.Size = new System.Drawing.Size(18, 17);
+            this.cb_december.TabIndex = 7;
+            this.cb_december.UseVisualStyleBackColor = true;
+            // 
+            // cb_june
+            // 
+            this.cb_june.AutoSize = true;
+            this.cb_june.Location = new System.Drawing.Point(197, 410);
+            this.cb_june.Name = "cb_june";
+            this.cb_june.Size = new System.Drawing.Size(18, 17);
+            this.cb_june.TabIndex = 7;
+            this.cb_june.UseVisualStyleBackColor = true;
+            // 
+            // cb_october
+            // 
+            this.cb_october.AutoSize = true;
+            this.cb_october.Location = new System.Drawing.Point(535, 327);
+            this.cb_october.Name = "cb_october";
+            this.cb_october.Size = new System.Drawing.Size(18, 17);
+            this.cb_october.TabIndex = 7;
+            this.cb_october.UseVisualStyleBackColor = true;
+            // 
+            // cb_april
+            // 
+            this.cb_april.AutoSize = true;
+            this.cb_april.Location = new System.Drawing.Point(197, 325);
+            this.cb_april.Name = "cb_april";
+            this.cb_april.Size = new System.Drawing.Size(18, 17);
+            this.cb_april.TabIndex = 7;
+            this.cb_april.UseVisualStyleBackColor = true;
+            // 
+            // cb_august
+            // 
+            this.cb_august.AutoSize = true;
+            this.cb_august.Location = new System.Drawing.Point(535, 240);
+            this.cb_august.Name = "cb_august";
+            this.cb_august.Size = new System.Drawing.Size(18, 17);
+            this.cb_august.TabIndex = 7;
+            this.cb_august.UseVisualStyleBackColor = true;
+            // 
+            // cb_february
+            // 
+            this.cb_february.AutoSize = true;
+            this.cb_february.Location = new System.Drawing.Point(197, 238);
+            this.cb_february.Name = "cb_february";
+            this.cb_february.Size = new System.Drawing.Size(18, 17);
+            this.cb_february.TabIndex = 7;
+            this.cb_february.UseVisualStyleBackColor = true;
+            // 
+            // cb_november
+            // 
+            this.cb_november.AutoSize = true;
+            this.cb_november.Location = new System.Drawing.Point(535, 370);
+            this.cb_november.Name = "cb_november";
+            this.cb_november.Size = new System.Drawing.Size(18, 17);
+            this.cb_november.TabIndex = 8;
+            this.cb_november.UseVisualStyleBackColor = true;
+            this.cb_november.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
+            // 
+            // cb_september
+            // 
+            this.cb_september.AutoSize = true;
+            this.cb_september.Location = new System.Drawing.Point(535, 285);
+            this.cb_september.Name = "cb_september";
+            this.cb_september.Size = new System.Drawing.Size(18, 17);
+            this.cb_september.TabIndex = 8;
+            this.cb_september.UseVisualStyleBackColor = true;
+            this.cb_september.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
+            // 
+            // cb_may
+            // 
+            this.cb_may.AutoSize = true;
+            this.cb_may.Location = new System.Drawing.Point(197, 368);
+            this.cb_may.Name = "cb_may";
+            this.cb_may.Size = new System.Drawing.Size(18, 17);
+            this.cb_may.TabIndex = 8;
+            this.cb_may.UseVisualStyleBackColor = true;
+            this.cb_may.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
+            // 
+            // cb_july
+            // 
+            this.cb_july.AutoSize = true;
+            this.cb_july.Location = new System.Drawing.Point(535, 198);
+            this.cb_july.Name = "cb_july";
+            this.cb_july.Size = new System.Drawing.Size(18, 17);
+            this.cb_july.TabIndex = 8;
+            this.cb_july.UseVisualStyleBackColor = true;
+            this.cb_july.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
+            // 
+            // cb_march
+            // 
+            this.cb_march.AutoSize = true;
+            this.cb_march.Location = new System.Drawing.Point(197, 283);
+            this.cb_march.Name = "cb_march";
+            this.cb_march.Size = new System.Drawing.Size(18, 17);
+            this.cb_march.TabIndex = 8;
+            this.cb_march.UseVisualStyleBackColor = true;
+            this.cb_march.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
+            // 
+            // cb_january
+            // 
+            this.cb_january.AutoSize = true;
+            this.cb_january.Location = new System.Drawing.Point(197, 196);
+            this.cb_january.Name = "cb_january";
+            this.cb_january.Size = new System.Drawing.Size(18, 17);
+            this.cb_january.TabIndex = 8;
+            this.cb_january.UseVisualStyleBackColor = true;
+            this.cb_january.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
+            // 
             // btnclear
             // 
-            this.btnclear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnclear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnclear.FlatAppearance.BorderSize = 0;
             this.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclear.ForeColor = System.Drawing.Color.Black;
-            this.btnclear.Location = new System.Drawing.Point(400, 431);
+            this.btnclear.ForeColor = System.Drawing.Color.White;
+            this.btnclear.Location = new System.Drawing.Point(400, 507);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(199, 37);
             this.btnclear.TabIndex = 8;
@@ -295,11 +412,11 @@ namespace GYM_Application_Project
             this.btnpayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnpayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnpayment.ForeColor = System.Drawing.Color.Black;
-            this.btnpayment.Location = new System.Drawing.Point(168, 432);
+            this.btnpayment.Location = new System.Drawing.Point(168, 508);
             this.btnpayment.Name = "btnpayment";
             this.btnpayment.Size = new System.Drawing.Size(199, 37);
             this.btnpayment.TabIndex = 8;
-            this.btnpayment.Text = "Payment";
+            this.btnpayment.Text = "Update Payment";
             this.btnpayment.UseVisualStyleBackColor = false;
             this.btnpayment.Click += new System.EventHandler(this.btnpayment_Click);
             // 
@@ -307,11 +424,13 @@ namespace GYM_Application_Project
             // 
             this.txtmemberid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtmemberid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtmemberid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtmemberid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtmemberid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmemberid.ForeColor = System.Drawing.Color.White;
             this.txtmemberid.Location = new System.Drawing.Point(168, 15);
             this.txtmemberid.Name = "txtmemberid";
-            this.txtmemberid.Size = new System.Drawing.Size(192, 23);
+            this.txtmemberid.Size = new System.Drawing.Size(199, 30);
             this.txtmemberid.TabIndex = 6;
             this.txtmemberid.TextChanged += new System.EventHandler(this.txtmemberid_TextChanged);
             // 
@@ -320,7 +439,7 @@ namespace GYM_Application_Project
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label22.Location = new System.Drawing.Point(415, 342);
+            this.label22.Location = new System.Drawing.Point(415, 418);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(87, 20);
             this.label22.TabIndex = 5;
@@ -330,78 +449,144 @@ namespace GYM_Application_Project
             // 
             this.lblemail.AutoSize = true;
             this.lblemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblemail.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblemail.Location = new System.Drawing.Point(168, 54);
+            this.lblemail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblemail.Location = new System.Drawing.Point(182, 120);
             this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(63, 25);
+            this.lblemail.Size = new System.Drawing.Size(65, 25);
             this.lblemail.TabIndex = 5;
-            this.lblemail.Text = "email";
+            this.lblemail.Text = "Email";
             // 
             // lblname
             // 
             this.lblname.AutoSize = true;
             this.lblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblname.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblname.Location = new System.Drawing.Point(530, 15);
+            this.lblname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblname.Location = new System.Drawing.Point(115, 78);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(158, 25);
+            this.lblname.Size = new System.Drawing.Size(152, 25);
             this.lblname.TabIndex = 5;
-            this.lblname.Text = "Member_Name";
+            this.lblname.Text = "Member Name";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label21.Location = new System.Drawing.Point(415, 210);
+            this.label21.Location = new System.Drawing.Point(415, 286);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(90, 20);
             this.label21.TabIndex = 5;
             this.label21.Text = "September";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label13.Location = new System.Drawing.Point(90, 414);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(45, 20);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "June";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label20.Location = new System.Drawing.Point(415, 298);
+            this.label20.Location = new System.Drawing.Point(415, 374);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(85, 20);
             this.label20.TabIndex = 5;
             this.label20.Text = "November";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label9.Location = new System.Drawing.Point(90, 282);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 20);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "March";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label19.Location = new System.Drawing.Point(415, 166);
+            this.label19.Location = new System.Drawing.Point(415, 242);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(61, 20);
             this.label19.TabIndex = 5;
             this.label19.Text = "August";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label12.Location = new System.Drawing.Point(90, 370);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 20);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "May";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label18.Location = new System.Drawing.Point(415, 256);
+            this.label18.Location = new System.Drawing.Point(415, 332);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(69, 20);
             this.label18.TabIndex = 5;
             this.label18.Text = "October";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label7.Location = new System.Drawing.Point(90, 238);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 20);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "February";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label17.Location = new System.Drawing.Point(415, 124);
+            this.label17.Location = new System.Drawing.Point(415, 200);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(39, 20);
             this.label17.TabIndex = 5;
             this.label17.Text = "July";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label11.Location = new System.Drawing.Point(90, 328);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(43, 20);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "April";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.Location = new System.Drawing.Point(90, 196);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 20);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "January";
             // 
             // label5
             // 
@@ -410,22 +595,22 @@ namespace GYM_Application_Project
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(13, 54);
+            this.label5.Location = new System.Drawing.Point(13, 120);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 25);
+            this.label5.Size = new System.Drawing.Size(162, 25);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Member Email";
+            this.label5.Text = "Member Email :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(431, 14);
+            this.label3.Location = new System.Drawing.Point(13, 78);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 25);
+            this.label3.Size = new System.Drawing.Size(81, 25);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Name";
+            this.label3.Text = "Name :";
             // 
             // label2
             // 
@@ -434,7 +619,7 @@ namespace GYM_Application_Project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(13, 15);
+            this.label2.Location = new System.Drawing.Point(13, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 25);
             this.label2.TabIndex = 5;
@@ -451,185 +636,15 @@ namespace GYM_Application_Project
             this.label1.TabIndex = 5;
             this.label1.Text = "Payments";
             // 
-            // cb_february
+            // pb_memicon
             // 
-            this.cb_february.AutoSize = true;
-            this.cb_february.Location = new System.Drawing.Point(197, 162);
-            this.cb_february.Name = "cb_february";
-            this.cb_february.Size = new System.Drawing.Size(18, 17);
-            this.cb_february.TabIndex = 7;
-            this.cb_february.UseVisualStyleBackColor = true;
-            // 
-            // cb_january
-            // 
-            this.cb_january.AutoSize = true;
-            this.cb_january.Location = new System.Drawing.Point(197, 120);
-            this.cb_january.Name = "cb_january";
-            this.cb_january.Size = new System.Drawing.Size(18, 17);
-            this.cb_january.TabIndex = 8;
-            this.cb_january.UseVisualStyleBackColor = true;
-            this.cb_january.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
-            // 
-            // cb_march
-            // 
-            this.cb_march.AutoSize = true;
-            this.cb_march.Location = new System.Drawing.Point(197, 207);
-            this.cb_march.Name = "cb_march";
-            this.cb_march.Size = new System.Drawing.Size(18, 17);
-            this.cb_march.TabIndex = 8;
-            this.cb_march.UseVisualStyleBackColor = true;
-            this.cb_march.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
-            // 
-            // cb_april
-            // 
-            this.cb_april.AutoSize = true;
-            this.cb_april.Location = new System.Drawing.Point(197, 249);
-            this.cb_april.Name = "cb_april";
-            this.cb_april.Size = new System.Drawing.Size(18, 17);
-            this.cb_april.TabIndex = 7;
-            this.cb_april.UseVisualStyleBackColor = true;
-            // 
-            // cb_may
-            // 
-            this.cb_may.AutoSize = true;
-            this.cb_may.Location = new System.Drawing.Point(197, 292);
-            this.cb_may.Name = "cb_may";
-            this.cb_may.Size = new System.Drawing.Size(18, 17);
-            this.cb_may.TabIndex = 8;
-            this.cb_may.UseVisualStyleBackColor = true;
-            this.cb_may.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
-            // 
-            // cb_june
-            // 
-            this.cb_june.AutoSize = true;
-            this.cb_june.Location = new System.Drawing.Point(197, 334);
-            this.cb_june.Name = "cb_june";
-            this.cb_june.Size = new System.Drawing.Size(18, 17);
-            this.cb_june.TabIndex = 7;
-            this.cb_june.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(90, 120);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 20);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "January";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label11.Location = new System.Drawing.Point(90, 252);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 20);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "April";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(90, 162);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 20);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "February";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label12.Location = new System.Drawing.Point(90, 294);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 20);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "May";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label9.Location = new System.Drawing.Point(90, 206);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 20);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "March";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label13.Location = new System.Drawing.Point(90, 338);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 20);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "June";
-            // 
-            // cb_july
-            // 
-            this.cb_july.AutoSize = true;
-            this.cb_july.Location = new System.Drawing.Point(535, 122);
-            this.cb_july.Name = "cb_july";
-            this.cb_july.Size = new System.Drawing.Size(18, 17);
-            this.cb_july.TabIndex = 8;
-            this.cb_july.UseVisualStyleBackColor = true;
-            this.cb_july.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
-            // 
-            // cb_september
-            // 
-            this.cb_september.AutoSize = true;
-            this.cb_september.Location = new System.Drawing.Point(535, 209);
-            this.cb_september.Name = "cb_september";
-            this.cb_september.Size = new System.Drawing.Size(18, 17);
-            this.cb_september.TabIndex = 8;
-            this.cb_september.UseVisualStyleBackColor = true;
-            this.cb_september.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
-            // 
-            // cb_november
-            // 
-            this.cb_november.AutoSize = true;
-            this.cb_november.Location = new System.Drawing.Point(535, 294);
-            this.cb_november.Name = "cb_november";
-            this.cb_november.Size = new System.Drawing.Size(18, 17);
-            this.cb_november.TabIndex = 8;
-            this.cb_november.UseVisualStyleBackColor = true;
-            this.cb_november.CheckedChanged += new System.EventHandler(this.cb_january_CheckedChanged);
-            // 
-            // cb_august
-            // 
-            this.cb_august.AutoSize = true;
-            this.cb_august.Location = new System.Drawing.Point(535, 164);
-            this.cb_august.Name = "cb_august";
-            this.cb_august.Size = new System.Drawing.Size(18, 17);
-            this.cb_august.TabIndex = 7;
-            this.cb_august.UseVisualStyleBackColor = true;
-            // 
-            // cb_october
-            // 
-            this.cb_october.AutoSize = true;
-            this.cb_october.Location = new System.Drawing.Point(535, 251);
-            this.cb_october.Name = "cb_october";
-            this.cb_october.Size = new System.Drawing.Size(18, 17);
-            this.cb_october.TabIndex = 7;
-            this.cb_october.UseVisualStyleBackColor = true;
-            // 
-            // cb_december
-            // 
-            this.cb_december.AutoSize = true;
-            this.cb_december.Location = new System.Drawing.Point(535, 336);
-            this.cb_december.Name = "cb_december";
-            this.cb_december.Size = new System.Drawing.Size(18, 17);
-            this.cb_december.TabIndex = 7;
-            this.cb_december.UseVisualStyleBackColor = true;
+            this.pb_memicon.Image = ((System.Drawing.Image)(resources.GetObject("pb_memicon.Image")));
+            this.pb_memicon.Location = new System.Drawing.Point(626, 15);
+            this.pb_memicon.Name = "pb_memicon";
+            this.pb_memicon.Size = new System.Drawing.Size(130, 130);
+            this.pb_memicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_memicon.TabIndex = 9;
+            this.pb_memicon.TabStop = false;
             // 
             // Payments
             // 
@@ -650,6 +665,7 @@ namespace GYM_Application_Project
             this.PaymentsPanel.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_memicon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -699,5 +715,6 @@ namespace GYM_Application_Project
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pb_memicon;
     }
 }

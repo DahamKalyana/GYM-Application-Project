@@ -61,6 +61,7 @@ namespace GYM_Application_Project
         {
             Profile profile = new Profile();
             profile.Show();
+            profile.GenerateDynamicUSerControlMembers();
             this.Hide();
         }
 

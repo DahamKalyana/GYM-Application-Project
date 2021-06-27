@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using System.IO;
 
 namespace GYM_Application_Project
 {
@@ -56,7 +56,7 @@ namespace GYM_Application_Project
         }
 
 
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\paymentsDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\DB_Items.mdf;Integrated Security=True;Connect Timeout=30");
         SqlDataReader rd;
         
 
@@ -86,7 +86,7 @@ namespace GYM_Application_Project
         private void txtmemberid_TextChanged(object sender, EventArgs e)
         {
 
-            string qry = "select name,email,January,February,March,April,May,June,July,August,September,October,November,December from Payments where member_id = '"+txtmemberid.Text+"'";
+            string qry = "select name,email,image,January,February,March,April,May,June,July,August,September,October,November,December from Payments where member_id = '"+txtmemberid.Text+"'";
 
             SqlCommand cmd = new SqlCommand(qry, con);
 
@@ -102,6 +102,7 @@ namespace GYM_Application_Project
                 {
                     string name;
                     string email;
+                    Image image;
                     string january;
                     string february;
                     string march;
@@ -116,7 +117,7 @@ namespace GYM_Application_Project
                     string december;
 
                     name = rd["name"].ToString();
-                    email = rd["email"].ToString();
+                    email = rd["email"].ToString();                    
                     january = rd["January"].ToString();
                     february = rd["February"].ToString();
                     march = rd["March"].ToString();
@@ -129,6 +130,11 @@ namespace GYM_Application_Project
                     october = rd["October"].ToString();
                     november = rd["November"].ToString();
                     december = rd["December"].ToString();
+
+                    byte[] picture = (byte[])rd.GetValue(2);
+
+                    MemoryStream ms = new MemoryStream(picture);
+                    pb_memicon.Image = Image.FromStream(ms);
 
                     lblname.Text = name;
                     lblemail.Text = email;
@@ -282,6 +288,7 @@ namespace GYM_Application_Project
             txtmemberid.Clear();
             lblname.Text = "Member_Name";
             lblemail.Text = "Member Email";
+            pb_memicon.Image = Image.FromFile(@"C:/Users/Daham Kalyana/source/repos/GYM Application Project/GYM Application Project/Resources/usericon.jpg");
         }
 
         private void btnpayment_Click(object sender, EventArgs e)
@@ -391,12 +398,12 @@ namespace GYM_Application_Project
             int result = cmd.ExecuteNonQuery();
             if (result != 0)
             {
-                MessageBox.Show("Payment Succesful..!!", "Pyment", MessageBoxButtons.OK);
+                MessageBox.Show("New Payment added successfully!", "Payment", MessageBoxButtons.OK);
                 clear();
             }
             else
             {
-                MessageBox.Show("Payment Unsuccesful...!", "Error", MessageBoxButtons.OK);
+                MessageBox.Show("Payment Unsuccessful...!", "Error", MessageBoxButtons.OK);
             }
         }
 

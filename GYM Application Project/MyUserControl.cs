@@ -26,6 +26,7 @@ namespace GYM_Application_Project
         private string _name;
         private string _email;
         private string _rate;
+        private string _trainerID;
 
         [Category("Custom Props")]
         public Image Icon
@@ -48,11 +49,21 @@ namespace GYM_Application_Project
             set { _email = value; lbl_Email.Text = value; }
         }
 
+        [Category("Custom Props")]
         public string Rate
         {
             get { return _rate; }
             set { _rate = value; lbl_Rate.Text = value; }
         }
+
+        [Category("Custom Props")]
+
+        public string TrainerID
+        {
+            get { return _trainerID; }
+            set { _trainerID = value; lbl_trainerID.Text = value; }
+        }
+
 
 
 
